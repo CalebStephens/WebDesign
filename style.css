@@ -1,7 +1,7 @@
 /*  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-  Author: Your name here
-  Date: creation date
+  Author: Caleb Stephens
+  Date: 23/3/22
 
   CONTENTS:
   ________
@@ -11,11 +11,12 @@
   003.  HEADER
   004.  NAVIGATION MENU
   005.  MAIN PAGE LAYOUT
-  006.  CARDS LAYOUT
-  007.  PAGE LAYOUT
-  008.  PLANT PAGE LAYOUT
-  009.  CONTACT FORM
-  010.  PAGE FOOTER
+  006.  ILLUSTRATION
+  007.  CARDS LAYOUT
+  008.  PAGE LAYOUT
+  009.  service PAGE LAYOUT
+  010.  CONTACT FORM
+  011.  PAGE FOOTER
 
   (to jump to any section of the Contents, use the section number (e.g. 002) in 'Find', Cmd-F)
 
@@ -64,6 +65,7 @@
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    
   }
 
   /* A elements that don't have a class get default styles */
@@ -114,21 +116,22 @@
   }
 
   html {
-      --dark-green-text: #13381f;
-      --light-green-background: #f1f8f5;
+      --dark-blue: #151F30;
+      --dark-orange: #E3371E;
+      --normal-blue: #103778;
       --page-card-background: #b2d8c7;
       --beige-page-background: #edece2;
       --slide-out-menu-background: rgba(233, 240, 234, 0.93);
       --footer-background: #173826;
-      --off-white: #fcfcf5;
+      --white: #ffffff;
       --description-text: #8c8e8d;
       --light-silver: #fcfcfa;
   }
 
   body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
       color: #1d1d1b;
-      background-color: var(--beige-page-background);
+      background-color: var(--white);
   }
 
     /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
@@ -140,14 +143,19 @@
     header {
       max-width: 1200px;
       margin: 0 auto;
-      background-color: var(--light-green-background);
+      /*background-color: var(--light-green-background);*/
       padding: 2rem 0 2rem 2rem;
       min-height: 7em;
+      display: flex;
+      justify-content: space-between;
     }
     
     header h1 {
-        color: var(--dark-green-text);
+        color: var(--dark-blue);
         font-weight: 600;
+        font-size: 4rem;
+        text-decoration: underline;
+        text-decoration-color: var(--dark-orange);
     }
   
     /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -163,10 +171,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0 1rem;
+    justify-content: flex-end;
+    align-items: center;
   }
   
   .topnav a {
-    color: var(--dark-green-text);
+    color: var(--dark-blue);
     text-decoration: none;
     font-size: 1.15em;
   }
@@ -177,12 +187,13 @@
   
   .topnav a.current-page {
     font-weight: 600;
+    color: var(--dark-orange);
   }
   
   .icon {
     position: absolute;
     display: none;
-    color: var(--dark-green-text);
+    color: var(--dark-blue);
     font-size: 2em;
     text-decoration: none;
   }
@@ -218,7 +229,7 @@
       width: 40vw;
       margin-top: 0;
       padding: 6em 2em 4em 2em;
-      background-color: var(--slide-out-menu-background);
+      background-color: var(--normal-blue);
     }
     .icon {
       position: absolute;
@@ -236,6 +247,7 @@
     header h1 {
       max-width: 300px;
       line-height: 100%;
+      font-size: 2rem;
     }
     header {
       height: 7.7em;
@@ -251,8 +263,9 @@
 
 main {
     max-width: 1200px;
-    background-color: var(--light-green-background);
+    background-color: var(--white);
     margin: 0 auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .introduction {
@@ -261,14 +274,14 @@ main {
 }
 
 .introduction h2 {
-    color: var(--dark-green-text);
+    color: var(--dark-blue);
     font-weight: 400;
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
 .introduction p {
-    color: var(--dark-green-text);
+    color: var(--dark-blue);
     font-weight: 300;
     font-size: 1rem;
     margin-bottom: 1rem;
@@ -298,59 +311,160 @@ main {
     box-shadow: inset 0 2px 15px rgba(0, 0, 0, .3);
   }
 
+
+  /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+      006.  Illustration
+
+    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+.illustrion-space{
+  height: 50vh;
+  width: 100%;
+  background-color: var(--dark-blue);
+  position: relative;
+  overflow: hidden;
+}
+.dot{
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 3px 3px 3px 3px;
+}
+
+.big_dot{
+  height: 450px;
+  width: 450px;
+  background-color: var(--normal-blue);
+  left: 45%;
+  top: 35%;
+  animation: bigDot 4s infinite;
+  
+}
+
+@keyframes bigDot {
+  0%   {left:45%; top:35%;}
+  50%  { left:45%; top:5%;}
+  100% { left:45%; top:35%;}
+}
+
+.second_dot{
+  height: 250px;
+  width: 250px;
+  background-color: var(--dark-orange);
+  right: 85%;
+  top: 15%;
+  animation: secondDot 2s infinite;
+  z-index: 3;
+}
+
+@keyframes secondDot {
+  0%   { right:85%; top:15%;}
+  50%  { right:85%; top:25%;}
+  100% { right:85%; top:15%;}
+}
+
+.third_dot{
+  height: 450px;
+  width: 450px;
+  background-color: var(--normal-blue);
+  left: 15%;
+  bottom: 35%;
+  animation: thirdDot 6s infinite;
+  z-index: 1;
+}
+
+@keyframes thirdDot {
+  0%   { left: 15%; bottom: 35%;}
+  50%  { left: -10%; bottom: 35%;}
+  100% { left: 15%; bottom: 35%;}
+}
+
+.forth_dot{
+  height: 250px;
+  width: 250px;
+  background-color: var(--dark-orange);
+  left: 35%;
+  bottom: 15%;
+  animation: forthDot 5s infinite;
+}
+@keyframes forthDot {
+  0%   { left: 35%; bottom: 15%;}
+  50%  { left: 80%; bottom: 15%;}
+  100% { left: 35%; bottom: 15%;}
+}
+
+
+
+
+
+
+
+
+
+
     /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-      006.  CARDS LAYOUT
+      007.  CARDS LAYOUT
 
     = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
   @supports (display: grid) {
-    .plants__grid {
+    .services__grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         grid-gap: 2rem;
         margin: 2rem;
       } }
 
-  .plant__item {
+  .service__item {
     text-align: center;
     background-color: var(--light-green-background);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     border-radius: 10px;
     padding: 2rem 2rem 1.4rem 2rem;
     transition: box-shadow .3s;
+    transition: 0.5s;
   }
 
-  .plant__item:hover {
+  .service__item:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color: var(--dark-blue);
+    color: var(--white);
   }
 
-  .plant__item__image {
+  .service__item__image {
     width: 100%;
     max-width: 500px;
     text-align: center;
   }
 
-  .plant__item img {
+  .service__item img {
     width: 100%;
   }
 
-  .plant__name {
-    color: var(--dark-green-text);
+  .service__name {
     font-weight: 400;
     margin-top: .8rem;
     margin-bottom: .4rem;
   }
 
-  .plant__desc {
+  .service__desc {
     color: var(--description-text);
     font-weight: 400;
     font-size: .7rem;
     margin-bottom: 1rem;
 }
+
+  .image_holder{
+    height: 300px;
+    width: 100%;
+    max-width: 500px;
+    background-color: #8c8e8d;
+    border-radius: 5px;
+  }
     /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-      007.  PAGE LAYOUT
+      008.  PAGE LAYOUT
 
     = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
@@ -362,7 +476,7 @@ main {
     }
 
     .page__card h2 {
-      color: var(--dark-green-text);
+      color: var(--dark-blue-text);
       font-weight: 400;
       font-size: 2.6em;
       /* margin-bottom: .4rem; */
@@ -376,19 +490,19 @@ main {
 
     /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-      008.  PLANT PAGE LAYOUT
+      009.  service PAGE LAYOUT
 
     = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
-    .plantpage__card__image { grid-area: one; }
-    .plantpage__card__desc__h2 { grid-area: two; }
-    .plantpage__card__desc__h3 { grid-area: three; }
-    .plantpage__card__desc__intro { grid-area: four; }
+    .servicepage__card__image { grid-area: one; }
+    .servicepage__card__desc__h2 { grid-area: two; }
+    .servicepage__card__desc__h3 { grid-area: three; }
+    .servicepage__card__desc__intro { grid-area: four; }
     .block-one { grid-area: five; }
     .block-two { grid-area: six; }
 
   @supports (display: grid) {
-    .plantpage__card {
+    .servicepage__card {
         display: grid;
         gap: 1.5rem;
         grid-auto-columns: 1fr;
@@ -404,7 +518,7 @@ main {
   }
 
   @media screen and (max-width: 54.6875em) {
-      .plantpage__card {
+      .servicepage__card {
         grid-template-areas: 
           'two'
           'one'
@@ -416,41 +530,41 @@ main {
     }
   }
 
-  .plantpage__card h2 {
-    color: var(--dark-green-text);
+  .servicepage__card h2 {
+    color: var(--dark-blue);
     font-weight: 400;
     font-size: 2.6em;
     /* margin-bottom: .4rem; */
   }
 
-  .plantpage__card h3 {
+  .servicepage__card h3 {
     font-weight: 300;
     font-size: 2em;
     /* margin-bottom: .4rem; */
   }
 
-  .plantpage__card h4 {
+  .servicepage__card h4 {
     font-weight: 500;
     font-size: 1.3em;
     /* margin: 2rem 0 .5rem 0; */
   }
 
-  .plantpage__card b {
+  .servicepage__card b {
     font-weight: 600;
   }
 
-  .plantpage__card__desc {  
-    color: var(--dark-green-text);
+  .servicepage__card__desc {  
+    color: var(--dark-blue);
     font-weight: 400;
     font-size: .9rem;
     /* margin-bottom: 1rem; */
     max-width: 24rem;
   }
-  .plantpage__card__desc ul {
+  .servicepage__card__desc ul {
     list-style-type: none;
   }
 
-  .plantpage__card__desc ul li {
+  .servicepage__card__desc ul li {
     padding-left: 1rem;
     background-image: url(images/list-image.svg);
     background-position: 0 .28rem;
@@ -459,14 +573,14 @@ main {
     /* margin: .3rem 0; */
   }
 
-  .plantpage__card__image {
+  .servicepage__card__image {
     /* margin-bottom: 1rem; */
     width: 100%;
     max-width: 24rem;
   }
 
   .next-button {
-    background-color: var(--dark-green-text);
+    background-color: var(--dark-blue);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -484,12 +598,12 @@ main {
   }
 
   .next-button:hover {
-    background-color: var(--dark-green-text);
+    background-color: var(--dark-blue);
   }
 
     /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-    009.  CONTACT FORM
+    010.  CONTACT FORM
 
     = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
@@ -557,7 +671,7 @@ main {
       }
 
     .contact-form__heading {
-      color: var(--dark-green-text);
+      color: var(--dark-blue);
       font-weight: 400;
       font-size: 2.6em;
     }
@@ -591,14 +705,16 @@ main {
 
     /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-    010.  PAGE FOOTER
+    011.  PAGE FOOTER
 
     = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
     footer {
-      background-color: var(--footer-background);
+      background-color: var(--dark-blue);
       padding: 2rem;
-      color: var(--off-white);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
     }
 
     footer p {
@@ -610,12 +726,15 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-gap: 2rem;
+    
   }
 }
 
   .footer__menu {
     padding: 2rem;
   }
+  
+
 
   .footer__menu__heading {
       font-weight: 600;
@@ -628,11 +747,28 @@ main {
 
 ul.footer__menu__list li a {
     text-decoration: none;
-    color: var(--off-white);
+    color: var(--white);
 }
 
 ul.footer__menu__list li a:hover {
     text-decoration: underline;
 }
+
+.bring_forward{
+  position: relative;
+  z-index: 33;
+}
+
+.footer_dot{
+  position: absolute;
+  height: 450px;
+  width: 450px;
+  border-radius: 50%;
+  background-color: var(--dark-orange);
+  top: 40%;
+  right: -5%;
+  z-index: 3;
+}
+
 
 /* = = =  E N D = = = */
