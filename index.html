@@ -110,15 +110,22 @@
         </a>
       </article>
 
-      <article class="service__item">
-        <div class = "image_holder">
-          <!-- <img  src="images/kowhai-flowers-alex-schwab-1920.png" alt="kowhai flowers"> -->
+      <article class="service__item" id="flip" onclick="flipper()">
+        <div class="front">
+          <div class = "image_holder">
+            <!-- <img  src="images/kowhai-flowers-alex-schwab-1920.png" alt="kowhai flowers"> -->
+          </div>
+          <h2 class="service__name">Rent</h2>
+          <p class="service__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial national flower. . .</p>
+          <a href="#" class="next-button">
+            <i class="fa fa-angle-right"></i>
+          </a>
         </div>
-        <h2 class="service__name">Rent</h2>
-        <p class="service__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial national flower. . .</p>
-        <a href="#" class="next-button">
-          <i class="fa fa-angle-right"></i>
-        </a>
+        <div class="back">
+          <a href="beech-species.html"><div class= "forYou button">Rent For Me</div></a>
+          <div class= "rentOut button">Rent Out</div>
+
+        </div>
       </article>
       
 
@@ -191,6 +198,27 @@
       } else {
         x.className = "topnav";
       }
+    }
+
+    function flipper(){
+      let name = document.querySelector("#flip");
+      let hide = document.querySelector(".front");
+      let hidden = document.querySelector(".back");
+      //let styling = document.querySelector(".service__item:last-of-type").style;
+      if (name.className === "service__item"){
+        console.log("here");
+        //styling.backgroundColor = "#151F30";
+        name.className += " flipped";
+        hide.style.display = "none";
+        hidden.style.display = "flex";
+        
+      }else{
+        name.className = "service__item";    
+        hide.style.display = "block";  
+        hidden.style.display = "none";
+        //styling.backgroundColor = "#FFFFFF";
+      }
+      
     }
 
  /*    function toTop(){

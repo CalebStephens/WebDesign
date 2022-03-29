@@ -49,56 +49,64 @@
     
         = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
-    <section class="services__grid">
+        <section class="services__grid">
 
-      <article class="service__item">
-        <div class = "image_holder">
-          <!-- <img  src="images/kowhai-flowers-alex-schwab-1920.png" alt="kowhai flowers"> -->
-        </div>
-        <h2 class="service__name">Buy</h2>
-        <p class="service__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial national flower. . .</p>
-        <a href="#" class="next-button">
-          <i class="fa fa-angle-right"></i>
-        </a>
-      </article>
-
-      <article class="service__item">
-        <div class = "image_holder">
-          <!-- <img  src="images/kowhai-flowers-alex-schwab-1920.png" alt="kowhai flowers"> -->
-        </div>
-        <h2 class="service__name">Sell</h2>
-        <p class="service__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial national flower. . .</p>
-        <a href="#" class="next-button">
-          <i class="fa fa-angle-right"></i>
-        </a>
-      </article>
-
-      <article class="service__item">
-        <div class = "image_holder">
-          <!-- <img  src="images/kowhai-flowers-alex-schwab-1920.png" alt="kowhai flowers"> -->
-        </div>
-        <h2 class="service__name">Rent</h2>
-        <p class="service__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial national flower. . .</p>
-        <a href="#" class="next-button">
-          <i class="fa fa-angle-right"></i>
-        </a>
-      </article>
-      
-
-  </section>
-
-      <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-
-          FOOTER
+          <article class="service__item">
+            <div class = "image_holder">
+              <!-- <img  src="images/kowhai-flowers-alex-schwab-1920.png" alt="kowhai flowers"> -->
+            </div>
+            <h2 class="service__name">Buy</h2>
+            <p class="service__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial national flower. . .</p>
+            <a href="#" class="next-button">
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </article>
     
-        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-
-        <footer>
+          <article class="service__item">
+            <div class = "image_holder">
+              <!-- <img  src="images/kowhai-flowers-alex-schwab-1920.png" alt="kowhai flowers"> -->
+            </div>
+            <h2 class="service__name">Sell</h2>
+            <p class="service__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial national flower. . .</p>
+            <a href="#" class="next-button">
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </article>
+    
+          <article class="service__item" id="flip" onclick="flipper()">
+            <div class="front">
+              <div class = "image_holder">
+                <!-- <img  src="images/kowhai-flowers-alex-schwab-1920.png" alt="kowhai flowers"> -->
+              </div>
+              <h2 class="service__name">Rent</h2>
+              <p class="service__desc">The kōwhai is one of the best known native trees in New Zealand and it’s our unofficial national flower. . .</p>
+              <a href="#" class="next-button">
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </div>
+            <div class="back">
+              <div class= "forYou button">Rent For Me</div>
+              <div class= "rentOut button">Rent Out</div>
+    
+            </div>
+          </article>
+          
+    
+      </section>
+    
+          <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+    
+              FOOTER
+        
+            = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+    
+      <footer>
+        <div class = "bring_forward">
           <p>
             The Plant Names Database lists over 46,000 names and is a primary source of information for Ngā Tipu o Aotearoa - New Zealand Plants. The purpose of the New Zealand Plant Names Database is to provide an authoritative record of the scientific names, taxonomic concepts (i.e., synonymies), and biostatus for the lichens, liverworts, mosses, ferns, freshwater algae and seed plants in New Zealand. It also records the associated literature, vernacular and Māori names, as well as recently published keys and descriptions for some taxa. Editorial work on the Plant Names Database is ongoing and as new treatments, taxa and naturalisations are published these are added to the database.
           </p>
           <div class="footer-grid">
-      
+    
             <article class="footer__menu">
               <h2 class="footer__menu__heading">
                 Navigation
@@ -108,7 +116,7 @@
                 <li onclick="toTop()"><a href="#">Back to Top</a></li>
               </ul>
             </article>
-      
+    
             <article class="footer__menu">
               <h2 class="footer__menu__heading">
                 Services
@@ -119,7 +127,7 @@
                 <li><a href="#">Rent</a></li>
               </ul>
             </article>
-      
+    
             <article class="footer__menu">
               <h2 class="footer__menu__heading">
                 About
@@ -131,26 +139,62 @@
                 <li><a href="#">Privacy statement</a></li>
               </ul>
             </article>
-      
+    
           </div>
-      
+    
           <div class="footer__site-details">
             <p>Copyright Taputapu&copy; 2022.</p>
           </div>
-        </footer>
-         
-          </main>
-
-          <script>
-            function toggleMenu() {
-              var x = document.getElementById("myTopnav");
-              if (x.className === "topnav") {
-                x.className += " responsive";
-              } else {
-                x.className = "topnav";
-              }
-            }
-            </script>
-
-</body>
-</html>
+        </div>
+        <div class = "dot footer_dot"></div>
+    
+        
+      </footer>
+     
+      </main>
+    
+      <script>
+        function toggleMenu() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+    
+        function flipper(){
+          let name = document.querySelector("#flip");
+          let hide = document.querySelector(".front");
+          let hidden = document.querySelector(".back");
+          //let styling = document.querySelector(".service__item:last-of-type").style;
+          if (name.className === "service__item"){
+            console.log("here");
+            //styling.backgroundColor = "#151F30";
+            name.className += " flipped";
+            hide.style.display = "none";
+            hidden.style.display = "flex";
+            
+          }else{
+            name.className = "service__item";    
+            hide.style.display = "block";  
+            hidden.style.display = "none";
+            //styling.backgroundColor = "#FFFFFF";
+          }
+          
+        }
+    
+     /*    function toTop(){
+          console.log("here");
+          document.querySelector("body").scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+          }; */
+    
+    
+    
+        </script>
+    
+    </body>
+    </html>
